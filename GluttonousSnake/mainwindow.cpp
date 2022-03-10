@@ -2,17 +2,19 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 
-#include "mainwindow.h"
 #include "constants.h"
+#include "gamecontroller.h"
+#include "mainwindow.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
       scene(new QGraphicsScene(this)),
-      view(new QGraphicsView(scene, this))
-//      game(new GameController(*scene, this))
+      view(new QGraphicsView(scene, this)),
+      game(new GameController(*scene, this))
 {
     setCentralWidget(view);
-    resize(600, 600);
+    setFixedSize(600, 600);
 
     initScene();
     initSceneBackground();

@@ -5,7 +5,7 @@
 
 class QGraphicsScene;
 class QGraphicsView;
-//class GameController;
+class GameController;
 
 class MainWindow : public QMainWindow
 {
@@ -25,7 +25,7 @@ private:
     QGraphicsScene *scene;
     QGraphicsView  *view;
 
-//    GameController *game;
+    GameController *game;
 };
 
 #endif // MAINWINDOW_H
