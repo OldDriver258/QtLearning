@@ -134,26 +134,36 @@ void Snake::handleCollisions()
     }
 }
 
+/*
+ * 场景发生的 advance 会推动 item 也进行 advance.
+ * item 的 advance 会发生两次调用第一次 phase == 0, 第二次 phase == 1, 可以通过这个机制实现一些动画
+ */
 void Snake::advance(int phase)
 {
+    //每次场景更新 item 只实现一次
     if (!phase)
         return;
 
+    //速度控制, 多少个 tick 更新一次 snake 状态
     if (tickCounter++ % speed != 0)
         return;
 
+    //默认状态下不发生移动, 也不用更新 snake 状态
     if (moveDirection == NoMove)
         return;
 
+    //growing 表示 snake 的初始长度和要伸长的长度, 之前 head 的点就作为新的身体
     if (growing > 0) {
         QPointF tailPoint = head;
         tail << tailPoint;
         growing -= 1;
     } else {
+        //不需要伸长的情况下, 去掉链表头的一个数据, 也就是 snake 的最后一个点
         tail.takeFirst();
         tail << head;
     }
 
+    //根据移动的方向给 snake 的 head 一个新的坐标
     switch (moveDirection) {
 
     case MoveLeft:
@@ -173,7 +183,9 @@ void Snake::advance(int phase)
         break;
     }
 
+    //设置 item 的新的位置
     setPos(head);
+    //进行碰撞的检测和处理
     handleCollisions();
 }
 
