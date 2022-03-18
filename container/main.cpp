@@ -4,6 +4,7 @@
 #include <QDate>
 #include <QList>
 #include <QDataStream>
+#include <QDebug>
 
 struct Movie
 {
@@ -12,25 +13,25 @@ struct Movie
     QDate   releaseDate;
 };
 
-QDataStream &operator<<(QDataStream &out, const Movie &movie)
+QDebug operator<<(QDebug out, const Movie &movie)
 {
     out << (quint32)movie.id << movie.title << movie.releaseDate;
     return out;
 }
 
-QDataStream &operator>>(QDataStream &in, Movie &movie)
-{
-    quint32     id;
-    QDate       date;
-    QString     str;
+//QDebug &operator>>(QDebug &in, Movie &movie)
+//{
+//    quint32     id;
+//    QDate       date;
+//    QString     str;
 
-    in >> id >> str >> movie;
-    movie.id = (int)id;
-    movie.releaseDate = date;
-    movie.title = str;
-    return in;
-}
-
+//    in >> id >> str >> movie;
+//    movie.id = (int)id;
+//    movie.releaseDate = date;
+//    movie.title = str;
+//    return in;
+//}
+p
 
 int main(int argc, char *argv[])
 {
@@ -38,7 +39,12 @@ int main(int argc, char *argv[])
 
     QList<Movie>    movs;
 
-    Movie
+    Movie mov;
+    mov.id = 15;
+    mov.releaseDate = QDate(2021, 3, 12);
+    mov.title = "Hello";
+
+    qDebug() << mov;
 
     return a.exec();
 }

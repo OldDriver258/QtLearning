@@ -22,7 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
     setCentralWidget(view);
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setFixedSize(600, 700);
+    resize(1000, 1000);
+//    setFixedSize(600, 700);
 
     createActions();
     createMenus();
@@ -44,7 +45,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::initScene()
 {
-    scene->setSceneRect(-100, -100, 200, 200);
+    scene->setSceneRect(-100, -100, 200 + 10, 200 + 10);
 }
 
 void MainWindow::initSceneBackground()
