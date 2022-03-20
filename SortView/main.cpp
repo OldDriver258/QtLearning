@@ -1,13 +1,11 @@
-#include "mainwindow.h"
+#include "sortview.h"
+
 #include <QApplication>
-#include <QAbstractScrollArea>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-
-    w. show();
-
+    SortView w;
+    w.show();
     return a.exec();
 }
