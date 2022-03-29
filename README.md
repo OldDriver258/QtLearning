@@ -27,6 +27,7 @@ QJSON 章节后转用版本 5.12.12，编译器使用版本为 MinGW 7.3.0
 | [二进制文件读写](https://www.devbean.net/2013/01/qt-study-road-2-binary-file-io/) [文本文件读写](https://www.devbean.net/2013/01/qt-study-road-2-text-file-io/) | QTextStream                    |
 | [存储容器](https://www.devbean.net/2013/01/qt-study-road-2-containers/) | container                      |
 | [遍历容器](https://www.devbean.net/2013/01/qt-study-road-2-iterator/) | Iterator                       |
+| [QListWidget、QTreeWidget 和 QTableWidget](https://www.devbean.net/2013/02/qt-study-road-2-qlistwidget-qtreewidget-qtablewidget/) | ListWidget<br />TreeWidget<br /> |
 | [QStringListModel](https://www.devbean.net/2013/02/qt-study-road-2-qstringlistmodel/) | QStringListModel               |
 | [QFileSystemModel](https://www.devbean.net/2013/02/qt-study-road-2-qfilesystemmodel/) | QFileSystemModel               |
 | [视图和委托](https://www.devbean.net/2013/03/qt-study-road-2-view-delegate/) | Delegate                       |
