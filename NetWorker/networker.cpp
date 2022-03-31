@@ -23,9 +23,9 @@ NetWorker *NetWorker::instance()
 /*
  * 将用户的 url 给底层的 QNetworkAccessManager
  */
-void NetWorker::get(const QString &url)
+QNetworkReply *NetWorker::get(const QString &url)
 {
-    d->manager->get(QNetworkRequest(QUrl(url)));
+    return d->manager->get(QNetworkRequest(QUrl(url)));
 }
 
 

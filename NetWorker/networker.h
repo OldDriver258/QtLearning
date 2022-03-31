@@ -12,7 +12,7 @@ public:
     ~NetWorker();
 
     static NetWorker *instance();
-    void get(const QString &url);
+    QNetworkReply *get(const QString &url);
 
 signals:
     void finished(QNetworkReply *reply);

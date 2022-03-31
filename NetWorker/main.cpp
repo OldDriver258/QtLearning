@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-     qDebug()<<"QSslSocket="<<QSslSocket::sslLibraryBuildVersionString();
+     qDebug() << "QSslSocket=" << QSslSocket::sslLibraryBuildVersionString();
      qDebug() << "OpenSSL支持情况:" << QSslSocket::supportsSsl();
 
     MainWindow w;
