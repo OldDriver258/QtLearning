@@ -48,6 +48,11 @@ QJSON 章节后转用版本 5.12.12，编译器使用版本为 MinGW 7.3.0
 | [进程](https://www.devbean.net/2013/11/qt-study-road-2-process/) | QProcess |
 | [进程间通信](https://www.devbean.net/2013/11/qt-study-road-2-ipc/) | IPC |
 | [线程简介](https://www.devbean.net/2013/11/qt-study-road-2-thread-intro/) | QThread |
+| [QML 和 QtQuick 2](https://www.devbean.net/2013/12/qt-study-road-2-qml-and-qtquick2/) | qqdemo |
+| [QML 组件](https://www.devbean.net/2014/01/qt-study-road-2-qml-component/) | qqButton |
+| [定位器](https://www.devbean.net/2014/01/qt-study-road-2-positioner/) | Positioners |
+| [元素布局](https://www.devbean.net/2014/02/qt-study-road-2-qml-layout/) | anchor |
+| [输入元素](https://www.devbean.net/2014/03/qt-study-road-2-qml-input-elements/) | TextInput |
 
 
 
